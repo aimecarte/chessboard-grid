@@ -14,18 +14,17 @@ body {
 .board {
     height: 70vmin;
     aspect-ratio: 1;
-    background-color: red;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
 
     border: 1vmin solid #adadad;
 }
 
-.box1, .box2 {
+.box1, .box2, .button {
     display: grid;
     place-items: center;
-    font-size: 6vmin;
+    font-size: 5vmin;
 }
 
 .box1:nth-of-type(odd) {
@@ -44,6 +43,33 @@ body {
     background-color: #e2e2e2;
 }
 
-#button:checked ~ .board .box2 .pawn {
+.piece {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.button {
+    grid-column: span 8;
+    font-size: 3vmin;
+}
+
+#button:checked ~ .button {
+    background-color: black;
+    color: white;
+}
+
+#button:checked ~ .board :nth-child(3 of .box2) .pawn {
     transform: translateY(200%);
-} 
+    transition: transform 1s ease-in-out 0.2s;
+}
+
+#button:checked ~ .board :nth-child(4 of .box2) .pawn {
+    transform: translateY(200%);
+    transition: transform 1s ease-in-out 0.4s;
+}
+
+/* #button:checked ~ .board div:nth-child(3) .pawn {
+    transform: translateY(200%);
+    transition: transform 1s ease-in-out;
+} */
