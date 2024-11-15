@@ -61,7 +61,7 @@ body {
 
 #button:checked ~ .board .white-piece[data-index="5"] {
     animation: move1 1s linear 500ms forwards,
-    move6_5 1s linear 6s forwards;
+    move6_5 1ms linear 7s forwards;
     display: block;
 }
 
@@ -76,7 +76,7 @@ body {
 #button:checked ~ .board .black-piece[data-index="4"] {
     animation: move4 1s linear 4s forwards, 
     move6 1s linear 6s forwards,
-    move7_5 1s linear 7s forwards;
+    move7_5 1ms linear 8s forwards;
     display: block;
 }
 
@@ -160,7 +160,7 @@ body {
 
 @keyframes move6_5 {
     to{
-        display: none;
+        opacity: 0;
     }
 }
 
@@ -172,7 +172,7 @@ body {
 
 @keyframes move7_5 {
     to{
-        display: none;
+        opacity: 0;
     }
 }
 
