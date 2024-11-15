@@ -8,43 +8,26 @@
     <script src="https://kit.fontawesome.com/6ba75daa7d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <input type="checkbox" name="button" id="button" hidden>
+    <div class="container">
+        <input type="checkbox" name="button" id="button" hidden>
     <div class="board">
-        <div class="box1"><p class="piece rook">&#9814</p></div>
-        <div class="box1"><p class="piece knight">&#9816</p></div>
-        <div class="box1"><p class="piece bishop">&#9815</p></div>
-        <div class="box1"><p class="piece queen">&#9813</p></div>
-        <div class="box1"><p class="piece king">&#9812</p></div>
-        <div class="box1"><p class="piece bishop">&#9815</p></div>
-        <div class="box1"><p class="piece knight">&#9816</p></div>
-        <div class="box1"><p class="piece rook">&#9814</p></div>
+        <div class="box1"><p class="black-piece rook">&#9820</p></div>
+        <div class="box1"><p class="black-piece knight" data-index="2">&#9822</p></div>
+        <div class="box1"><p class="black-piece bishop">&#9821</p></div>
+        <div class="box1"><p class="black-piece queen">&#9819</p></div>
+        <div class="box1"><p class="black-piece king" data-index="5">&#9818</p></div>
+        <div class="box1"><p class="black-piece bishop">&#9821</p></div>
+        <div class="box1"><p class="black-piece knight" data-index="7">&#9822</p></div>
+        <div class="box1"><p class="black-piece rook">&#9820</p></div>
 
-        <div class="box2"><p class="piece pawn">&#9817</p></div>
-        <div class="box2"><p class="piece pawn">&#9817</p></div>
-        <div class="box2"><p class="piece pawn">&#9817</p></div>
-        <div class="box2"><p class="piece pawn">&#9817</p></div>
-        <div class="box2"><p class="piece pawn">&#9817</p></div>
-        <div class="box2"><p class="piece pawn">&#9817</p></div>
-        <div class="box2"><p class="piece pawn">&#9817</p></div>
-        <div class="box2"><p class="piece pawn">&#9817</p></div>
-
-        <div class="box1"></div>
-        <div class="box1"></div>
-        <div class="box1"></div>
-        <div class="box1"></div>
-        <div class="box1"></div>
-        <div class="box1"></div>
-        <div class="box1"></div>
-        <div class="box1"></div>
-
-        <div class="box2"></div>
-        <div class="box2"></div>
-        <div class="box2"></div>
-        <div class="box2"></div>
-        <div class="box2"></div>
-        <div class="box2"></div>
-        <div class="box2"></div>
-        <div class="box2"></div>
+        <div class="box2"><p class="black-piece pawn">&#9823</p></div>
+        <div class="box2"><p class="black-piece pawn">&#9823</p></div>
+        <div class="box2"><p class="black-piece pawn" data-index="3">&#9823</p></div>
+        <div class="box2"><p class="black-piece pawn" data-index="4">&#9823</p></div>
+        <div class="box2"><p class="black-piece pawn">&#9823</p></div>
+        <div class="box2"><p class="black-piece pawn">&#9823</p></div>
+        <div class="box2"><p class="black-piece pawn">&#9823</p></div>
+        <div class="box2"><p class="black-piece pawn">&#9823</p></div>
 
         <div class="box1"></div>
         <div class="box1"></div>
@@ -64,25 +47,45 @@
         <div class="box2"></div>
         <div class="box2"></div>
 
-        <div class="box1">&#9823</div>
-        <div class="box1">&#9823</div>
-        <div class="box1">&#9823</div>
-        <div class="box1">&#9823</div>
-        <div class="box1">&#9823</div>
-        <div class="box1">&#9823</div>
-        <div class="box1">&#9823</div>
-        <div class="box1">&#9823</div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
+        <div class="box1"></div>
 
-        <div class="box2">&#9820</div>
-        <div class="box2">&#9822</div>
-        <div class="box2">&#9821</div>
-        <div class="box2">&#9819</div>
-        <div class="box2">&#9818</div>
-        <div class="box2">&#9821</div>
-        <div class="box2">&#9822</div>
-        <div class="box2">&#9820</div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
 
-        <label for="button" class="button">Play</label>
+        <div class="box1"><p class="white-piece pawn">&#9817</p></div>
+        <div class="box1"><p class="white-piece pawn">&#9817</p></div>
+        <div class="box1"><p class="white-piece pawn">&#9817</p></div>
+        <div class="box1"><p class="white-piece pawn" data-index="4">&#9817</p></div>
+        <div class="box1"><p class="white-piece pawn" data-index="5">&#9817</p></div>
+        <div class="box1"><p class="white-piece pawn">&#9817</p></div>
+        <div class="box1"><p class="white-piece pawn">&#9817</p></div>
+        <div class="box1"><p class="white-piece pawn">&#9817</p></div>
+
+        <div class="box2"><p class="white-piece rook">&#9814</p></div>
+        <div class="box2"><p class="white-piece knight" data-index="10">&#9816</p></div>
+        <div class="box2"><p class="white-piece bishop">&#9815</p></div>
+        <div class="box2"><p class="white-piece queen" data-index="12">&#9813</p></div>
+        <div class="box2"><p class="white-piece king">&#9812</p></div>
+        <div class="box2"><p class="white-piece bishop">&#9815</p></div>
+        <div class="box2"><p class="white-piece knight">&#9816</p></div>
+        <div class="box2"><p class="white-piece rook">&#9814</p></div>
+
+        
+    </div>
+    <label for="button" class="button">&#9654 Play</label>
     </div>
     
     

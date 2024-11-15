@@ -16,7 +16,7 @@ body {
     aspect-ratio: 1;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 1fr);
 
     border: 1vmin solid #adadad;
 }
@@ -24,7 +24,7 @@ body {
 .box1, .box2, .button {
     display: grid;
     place-items: center;
-    font-size: 5vmin;
+    font-size: 6vmin;
 }
 
 .box1:nth-of-type(odd) {
@@ -43,15 +43,15 @@ body {
     background-color: #e2e2e2;
 }
 
-.piece {
+.black-piece, .white-piece {
     width: 100%;
     height: 100%;
     text-align: center;
 }
 
 .button {
-    grid-column: span 8;
-    font-size: 3vmin;
+    padding: 1vmin;
+    font-size: 2vmin;
 }
 
 #button:checked ~ .button {
@@ -59,17 +59,147 @@ body {
     color: white;
 }
 
-#button:checked ~ .board :nth-child(3 of .box2) .pawn {
-    transform: translateY(200%);
-    transition: transform 1s ease-in-out 0.2s;
+#button:checked ~ .board .white-piece[data-index="5"] {
+    animation: move1 1s linear 500ms forwards,
+    move6_5 1s linear 6s forwards;
 }
 
-#button:checked ~ .board :nth-child(4 of .box2) .pawn {
-    transform: translateY(200%);
-    transition: transform 1s ease-in-out 0.4s;
+#button:checked ~ .board .black-piece[data-index="3"] {
+    animation: move2 1s linear 2s forwards;
 }
 
-/* #button:checked ~ .board div:nth-child(3) .pawn {
-    transform: translateY(200%);
-    transition: transform 1s ease-in-out;
+#button:checked ~ .board .white-piece[data-index="4"] {
+    animation: move3 1s linear 3s forwards;
+}
+
+#button:checked ~ .board .black-piece[data-index="4"] {
+    animation: move4 1s linear 4s forwards, 
+    move6 1s linear 6s forwards,
+    move7_5 1s linear 7s forwards;
+}
+
+#button:checked ~ .board .white-piece[data-index="10"] {
+    animation: move5 1s linear 5s forwards,
+    move7 1s linear 7s forwards,
+    move11 1s linear 11s forwards;
+}
+
+/* #button:checked ~ .board .black-piece[data-index="4"] {
+    animation: move6 1s linear 6s forwards;
 } */
+
+/* #button:checked ~ .board .white-piece[data-index="5"] {
+    animation: move6_5 1s linear 6s forwards;
+} */
+
+/* #button:checked ~ .board .white-piece[data-index="10"] {
+    animation: move7 1s linear 7s forwards;
+} */
+
+/* #button:checked ~ .board .black-piece[data-index="4"] {
+    animation: move7_5 1s linear 7s forwards;
+} */
+
+#button:checked ~ .board .black-piece[data-index="2"] {
+    animation: move8 1s linear 8s forwards;
+} 
+
+#button:checked ~ .board .white-piece[data-index="12"] {
+    animation: move9 1s linear 9s forwards;
+}
+
+#button:checked ~ .board .black-piece[data-index="7"] {
+    animation: move10 1s linear 10s forwards;
+}
+
+/* #button:checked ~ .board .white-piece[data-index="10"] {
+    animation: move11 1s linear 11s forwards;
+} */
+
+#button:checked ~ .board .black-piece[data-index="5"] {
+    animation: move11_5 .5s linear 12s forwards;
+}
+
+@keyframes move1 {
+    to{
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes move2 {
+    to{
+        transform: translateY(100%);
+    }
+}
+
+@keyframes move3 {
+    to{
+        transform: translateY(-200%);
+    }
+}
+
+@keyframes move4 {
+    to{
+        transform: translateY(200%);
+    }
+}
+
+@keyframes move5 {
+    to{
+        transform: translate(100%,-200%);
+    }
+} 
+
+@keyframes move6 {
+    to{
+        transform: translate(100%,300%);
+    }
+}
+
+@keyframes move6_5 {
+    to{
+        display: none;
+    }
+}
+
+@keyframes move7 {
+    to{
+        transform: translate(300%,-300%);
+    }
+}
+
+@keyframes move7_5 {
+    to{
+        display: none;
+    }
+}
+
+@keyframes move8 {
+    to{
+        transform: translate(200%,100%);
+    }
+}
+
+@keyframes move9 {
+    to{
+        transform: translate(100%,-100%);
+    }
+}
+
+@keyframes move10 {
+    to{
+        transform: translate(-100%,200%);
+    }
+}
+
+@keyframes move11 {
+    to{
+        transform: translate(200%,-500%);
+    }
+}
+
+@keyframes move11_5 {
+    to{
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+}
